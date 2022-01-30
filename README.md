@@ -17,11 +17,21 @@ generate()
 ```
 to return a runname as string.
 
+You can also choose a delimiter:
+
+```python
+generate("-")
+```
+
 ## Commands
 
 There are some commands:
 
 `runnamegen generate` generate runname and display in terminal.
+
+`runnamegen generate _` generate runname with _ as delimiter and display in terminal.
+
+`runnamegen generate -` generate runname with - as delimiter and display in terminal.
 
 `runnamegen exclude <noun_category>` excludes specific noun-category such as pokemon.
 
