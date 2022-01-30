@@ -45,7 +45,7 @@ There are some commands:
 
 ## Source
 
-I got the current set words from https://github.com/gambolputty/textstelle.
+I got the current set of words from https://github.com/gambolputty/textstelle.
 
 ## Content
 
