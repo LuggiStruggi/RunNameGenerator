@@ -11,11 +11,11 @@ In python file just
 ```python
 from runnamegen import generate
 ```
-Then in file use
+Then use
 ```python
 generate()
 ```
-which return a string.
+to return a runname as string.
 
 ## Commands
 
