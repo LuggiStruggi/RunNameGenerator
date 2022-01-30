@@ -1,8 +1,8 @@
 from setuptools import setup, find_packages
-from run_name_generator import __version__
+from runnamegen import __version__
 
 setup(
-    name='run_name_generator',
+    name='runnamegen',
     version=__version__,
 
     url='https://github.com/LuggiStruggi/RunNameGenerator.git',
@@ -13,7 +13,9 @@ setup(
 
 	entry_points={
     	'console_scripts': [
-        	'runnamegen=run_name_generator.commands:cmd_main',
+        	'runnamegen=runnamegen.commands:cmd_main',
     	],
 	},
+
+	decription="A simple run-name generator. Creates names in the style \"<adjective> <noun>\" like \"mad zebra\""
 )
