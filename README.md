@@ -21,17 +21,17 @@ to return a runname as string.
 
 There are some commands:
 
-`randnamegen generate` generate runname and display in terminal.
+`runnamegen generate` generate runname and display in terminal.
 
-`randnamegen exclude <noun_category>` excludes specific noun-category such as pokemon.
+`runnamegen exclude <noun_category>` excludes specific noun-category such as pokemon.
 
-`randnamegen include <noun_category>` includes specific noun-category such as pokemon. 
+`runnamegen include <noun_category>` includes specific noun-category such as pokemon. 
 
-`randnamegen add-nouns <filename>` adds noun file. Needs to be .txt where each word is seperated by a line break. 
+`runnamegen add-nouns <filename>` adds noun file. Needs to be .txt where each word is seperated by a line break. 
 
-`randnamegen add-adjectives <filename>` adds adjective file. Needs to be .txt where each word is seperated by a line break.
+`runnamegen add-adjectives <filename>` adds adjective file. Needs to be .txt where each word is seperated by a line break.
 
-`randnamegen cleanup` cleans up the files such that there are no words which are two words and all are lowercase.
+`runnamegen cleanup` cleans up the files such that there are no words which are two words and all are lowercase.
 
 ## Source
 
