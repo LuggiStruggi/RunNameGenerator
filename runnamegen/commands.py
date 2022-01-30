@@ -80,6 +80,8 @@ def cmd_main():
 		cmd_include(args.category)
 	elif args.subcommand == "add-nouns":
 		cmd_add_nouns(args.filename)
+	elif args.subcommand == "add-adjectives":
+		cmd_add_nouns(args.filename)
 	elif args.subcommand == "generate":
 		cmd_generate()
 	elif args.subcommand == "cleanup":
