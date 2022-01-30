@@ -34,8 +34,8 @@ def cmd_include(category):
 	with open(relative_path("excludes.txt"), 'w') as new:
 		new.writelines(sorted(excludes))
 
-def cmd_generate():
-	print(generate())
+def cmd_generate(delimiter: str=" "):
+	print(generate(delimiter))
 
 def cmd_cleanup():
 	for path in ["adjectives", "nouns"]:
@@ -70,8 +70,9 @@ def cmd_main():
 	p_add_adj.add_argument('filename', type=str, help='add adjective file to randnamegen')
 
 	p_generate = subparsers.add_parser('generate', help='generate run name')
+	p_generate.add_argument('delimiter', type=str, choices=[' ', '_', '-'], help='change the delimiter', nargs='?', default=" ")
 	
-	p_cleanup = subparsers.add_parser('cleanup', help='clean up word files (remove 2 letter words and lowercase)')
+	p_cleanup = subparsers.add_parser('cleanup', help='clean up word files (remove 2 word words and lowercase)')
 	
 	args = parser.parse_args()
 	if args.subcommand == "exclude":
@@ -83,6 +84,6 @@ def cmd_main():
 	elif args.subcommand == "add-adjectives":
 		cmd_add_nouns(args.filename)
 	elif args.subcommand == "generate":
-		cmd_generate()
+		cmd_generate(args.delimiter)
 	elif args.subcommand == "cleanup":
 		cmd_cleanup()

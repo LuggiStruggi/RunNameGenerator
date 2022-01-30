@@ -11,6 +11,8 @@ setup(
 
     packages=find_packages(),
 
+	package_data = {'runnamegen' : ['excludes.txt', 'nouns/*', 'adjectives/*']},
+
 	entry_points={
     	'console_scripts': [
         	'runnamegen=runnamegen.commands:cmd_main',
