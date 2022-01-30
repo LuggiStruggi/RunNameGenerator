@@ -1,5 +1,5 @@
 # RunNameGenerator
-A simple name generator in the syle of **\<adjective\> \<noun\>** like **mad zebra**.
+A simple name generator in the syle of **\<adjective\> \<noun\>** like **mad zebra** :zany_face: :zebra:.
 
 ## Install:
 
