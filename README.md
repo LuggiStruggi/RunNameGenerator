@@ -3,7 +3,10 @@ A simple name generator in the syle of **\<adjective\> \<noun\>** like **mad zeb
 
 ## Install:
 
-Install using `pip install runnamegen`
+Install using
+```
+pip install runnamegen
+```
 
 ## Use:
 
