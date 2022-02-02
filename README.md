@@ -1,9 +1,12 @@
 # RunNameGenerator
-A simple name generator in the syle of **\<adjective\> \<noun\>** like **mad zebra**.
+A simple name generator in the syle of **\<adjective\> \<noun\>** like **mad zebra** :zany_face: :zebra:.
 
 ## Install:
 
-Install using `pip install runnamegen`
+Install using
+```
+pip install runnamegen
+```
 
 ## Use:
 
@@ -45,7 +48,7 @@ There are some commands:
 
 ## Source
 
-I got the current set words from https://github.com/gambolputty/textstelle.
+I got the current set of words from https://github.com/gambolputty/textstelle.
 
 ## Content
 
