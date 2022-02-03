@@ -32,6 +32,8 @@ There are some commands:
 
 `runnamegen generate` generate runname and display in terminal.
 
+`runnamegen generate -n <integer>` generate n-times a runname and display them in terminal.
+
 `runnamegen generate _` generate runname with _ as delimiter and display in terminal.
 
 `runnamegen generate -` generate runname with - as delimiter and display in terminal.
