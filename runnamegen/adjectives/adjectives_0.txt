@@ -56,7 +56,6 @@ concerned
 confident
 confused
 conscious
-conservative
 convincing
 cool
 coquettish
@@ -65,7 +64,6 @@ courageous
 crazy
 creative
 creepy
-criminal
 critical
 cruel
 cuddly
@@ -150,7 +148,6 @@ fat
 fearful
 female
 feminine
-feminist
 feral
 fetching
 fiendish
@@ -165,11 +162,9 @@ friendly
 frightened
 frightening
 funny
-gay
 gender-bending
 generous
 gentle
-german
 glamorous
 gloomy
 good
@@ -192,7 +187,6 @@ honest
 hostile
 hot
 huge
-human
 hungry
 hurt
 ill
@@ -282,11 +276,8 @@ overconfident
 overworked
 panicky
 passive
-patient
-patient
 peaceful
 pennyless
-perfect
 perfect
 perverted
 playful
