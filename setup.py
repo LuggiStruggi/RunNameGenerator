@@ -7,7 +7,7 @@ setup(
 		author='Lukas König',
 		author_email='lukasmkoenig@gmx.net',
 		packages=find_packages(),
-		package_data = {'runnamegen' : ['excludes.txt', 'nouns/*', 'adjectives/*']},
+		package_data = {'runnamegen' : ['config.json', 'excludes.txt', 'nouns/*', 'adjectives/*']},
 		entry_points={'console_scripts': ['runnamegen=runnamegen.commands:cmd_main']},
 		decription="A simple run-name generator. Creates names in the style \"<adjective> <noun>\" like \"mad zebra\""
 	)
