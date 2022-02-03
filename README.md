@@ -36,6 +36,10 @@ There are some commands:
 
 `runnamegen generate -` generate runname with - as delimiter and display in terminal.
 
+`runnamegen alliteration on/off` turn on or off alliteration mode.
+
+`runnamegen alphabet on/off` turn on or off alphabet mode (nouns in alphabetical order).
+
 `runnamegen exclude <noun_category>` excludes specific noun-category such as pokemon.
 
 `runnamegen include <noun_category>` includes specific noun-category such as pokemon. 
