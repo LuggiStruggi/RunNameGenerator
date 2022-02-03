@@ -1,4 +1,5 @@
 import os
+import json
 from runnamegen import generate
 
 def listdir_fullpath(d):
@@ -13,9 +14,6 @@ def exclude_choices():
 
 def cmd_exclude(category):
 	category = category.lower()+"\n"
-	possible = [os.path.splitext(filename)[0]+"\n" for filename in os.listdir(relative_path("nouns"))]
-	if category not in possible:
-		return
 	excludes = [line.lower() for line in open(relative_path("excludes.txt"))]
 	if category not in excludes:
 		excludes.append(category)
@@ -27,20 +25,22 @@ def include_choices():
 
 def cmd_include(category):
 	category = category.lower()+"\n"
-	excludes = [line.lower() for line in open(relative_path("excludes.txt"))]
+	with open('config.json') as f:
+		excludes = [e.lower() for e in json.load(f)["excludes"]]
 	if category not in excludes:
 		return
 	excludes.remove(category)
 	with open(relative_path("excludes.txt"), 'w') as new:
 		new.writelines(sorted(excludes))
 
-def cmd_generate(delimiter: str=" "):
-	print(generate(delimiter))
+def cmd_generate(delimiter: str=" ", alliteration=False):
+	print(generate(delimiter, alliteration, letter='b'))
 
 def cmd_cleanup():
 	for path in ["adjectives", "nouns"]:
 		for filename in listdir_fullpath(relative_path(path)):
 			words = [line.lower() for line in open(filename) if len(line.strip().split(" ")) == 1]
+			words = list(set(words))
 			with open(filename, 'w') as new:
 				new.writelines(sorted(words))
 
@@ -71,6 +71,7 @@ def cmd_main():
 
 	p_generate = subparsers.add_parser('generate', help='generate run name')
 	p_generate.add_argument('delimiter', type=str, choices=[' ', '_', '-'], help='change the delimiter', nargs='?', default=" ")
+	p_generate.add_argument('-n', type=int, help='number of random words', default=1)
 	
 	p_cleanup = subparsers.add_parser('cleanup', help='clean up word files (remove 2 word words and lowercase)')
 	
@@ -84,6 +85,6 @@ def cmd_main():
 	elif args.subcommand == "add-adjectives":
 		cmd_add_nouns(args.filename)
 	elif args.subcommand == "generate":
-		cmd_generate(args.delimiter)
+		[cmd_generate(args.delimiter, alliteration=True) for i in range(args.n)]
 	elif args.subcommand == "cleanup":
 		cmd_cleanup()
