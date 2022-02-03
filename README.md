@@ -52,7 +52,7 @@ There are some commands:
 
 ## Source
 
-I got the current set of words from https://github.com/gambolputty/textstelle.
+I got the current set of words from https://github.com/gambolputty/textstelle and some more adjectives from here https://gist.github.com/hugsy/8910dc78d208e40de42deb29e62df913
 
 ## Content
 
