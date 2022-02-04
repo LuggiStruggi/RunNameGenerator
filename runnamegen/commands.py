@@ -61,7 +61,8 @@ def cmd_generate(delimiter: str = " "):
 	print(generate(delimiter))
 
 def delete_word_from_file(word, filename):
-	words = [line for line in open(filename) if line != word and line != word+"\n"]
+	with open(filename) as f:
+		words = [line.lower() for line in f if line.lower() != word and line.lower() != word+"\n"]
 	with open(filename, 'w') as new:
 		new.writelines(sorted(words))
 
@@ -69,8 +70,8 @@ def handle_duplicates(previous_words: dict, current_words: list, filename: str) 
 	for w in current_words:
 		if w in previous_words:
 			done = False
-			inpt = input(f"File [1]: {os.path.splitext(previous_words[w])[0]} and\n"+
-                         f"File [2]: {os.path.splitext(filename)[0]} share the word {w}.\n"+
+			inpt = input(f"File [1]: {os.path.splitext(os.path.basename(previous_words[w]))[0]} and\n"+
+                         f"File [2]: {os.path.splitext(os.path.basename(filename))[0]} share the word {w}.\n"+
 						 f"Would you like the word removed from [1], [2] or leave it in both [3]?")
 			while not done:
 				if inpt == "1":
@@ -83,21 +84,22 @@ def handle_duplicates(previous_words: dict, current_words: list, filename: str) 
 					done = True
 				else:
 					inpt = input("Type either 1, 2 or 3.")
-					done = False		
+					done = False
 		else:
 			previous_words[w] = filename
 
 	return previous_words, current_words
 
 def cmd_cleanup():
-	prev_words = {}
 	for path in ["adjectives", "nouns"]:
+		prev_words = {}
 		for filename in listdir_fullpath(relative_path(path)):
-			words = [line.lower() for line in open(filename) if len(line.strip().split(" ")) == 1]
+			with open(filename) as f:
+				words = [line.lower() for line in f if len(line.strip().split(" ")) == 1]
 			words = list(set(words))
-			prev_words, words = handle_duplicates(prev_words, words, filename)
-		with open(filename, 'w') as new:
-			new.writelines(sorted(words))
+			prev_words, words = handle_duplicates(previous_words=prev_words, current_words=words, filename=filename)
+			with open(filename, 'w') as new:
+				new.writelines(sorted(words))
 
 def cmd_add_nouns(filename):
 	noun_dir = relative_path("nouns")
