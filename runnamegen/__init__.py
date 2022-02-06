@@ -3,7 +3,7 @@ from functools import reduce
 import random
 import json
 
-__version__ = '1.7.3'
+__version__ = '2.0'
 
 def listdir_fullpath(d):
     return [os.path.join(d, f) for f in os.listdir(d)]

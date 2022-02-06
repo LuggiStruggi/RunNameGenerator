@@ -49,8 +49,8 @@ def include_choices():
 
 def cmd_include(category):
 	category = category.lower()+"\n"
-	with open('config.json') as f:
-		excludes = [e.lower() for e in json.load(f)["excludes"]]
+	with open(relative_path('excludes.txt')) as f:
+		excludes = [e.lower() for e in f]
 	if category not in excludes:
 		return
 	excludes.remove(category)
@@ -111,7 +111,7 @@ def cmd_add_adjectives(filename):
 
 def cmd_main():
 	import argparse
-	parser = argparse.ArgumentParser()
+	parser = argparse.ArgumentParser("A simple name generator in the syle of <adjective> <noun> like mad zebra.")
 	subparsers = parser.add_subparsers(dest='subcommand')	
 
 	p_exclude = subparsers.add_parser('exclude')
@@ -162,3 +162,6 @@ def cmd_main():
 			change_config("alphabet", "a")
 		elif args.mode == "off":
 			change_config("alphabet", "")
+	elif args.subcommand == None:
+		parser.print_help()
+		parser.exit()
