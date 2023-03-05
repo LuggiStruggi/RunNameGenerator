@@ -16,14 +16,14 @@ from runnamegen import generate
 ```
 Then use
 ```python
-generate()
+name = generate()
 ```
-to return a runname as string.
+to get a runname as string.
 
 You can also choose a delimiter:
 
 ```python
-generate("-")
+name = generate("-")
 ```
 
 ## Commands
