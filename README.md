@@ -1,5 +1,5 @@
 # RunNameGenerator
-A simple name generator in the syle of **\<adjective\> \<noun\>** like **mad zebra** :zany_face: :zebra:.
+A simple name generator in the syle of **\<adjective\> \<noun\>** like **mad zebra** :zany_face: :zebra:. I created it to give different runs of machine learning algorithms distinctive names I can remember.
 
 ## Install:
 
