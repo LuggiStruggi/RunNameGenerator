@@ -56,6 +56,6 @@ There are some commands:
 
 I got the current set of words from https://github.com/gambolputty/textstelle and some more adjectives from here https://gist.github.com/hugsy/8910dc78d208e40de42deb29e62df913
 
-## Content
+## Content Warning
 
-If there are any nouns or adjectives in the current list which you find harmful please create a  [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) for deleting this word.
+I did not go over the list of words completely personally. If there are any nouns or adjectives in the current list which you find harmful please create a  [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) for deleting this word.
